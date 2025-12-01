@@ -1,4 +1,5 @@
 from pathlib import Path
+from argparse import ArgumentParser
 
 
 def parse(file: Path):
@@ -29,8 +30,11 @@ def solve2(data: list[int]):
     return cnt
     
 
-nums = list(parse(Path("../input.txt")))
+parser = ArgumentParser()
+parser.add_argument("input", type=Path)
+args = parser.parse_args()
+
+nums = list(parse(args.input))
 print(solve1(nums))
 print(solve2(nums))
-
 
