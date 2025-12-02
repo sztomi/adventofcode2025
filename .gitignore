@@ -1,3 +1,5 @@
 target/
 inputs/day*.txt
 Cargo.lock
+__pycache__/
+*.pyc
